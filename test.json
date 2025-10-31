@@ -1,0 +1,247 @@
+{
+  "data": {},
+  "content": [
+    {
+      "data": {},
+      "content": [
+        {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "ATK: ",
+                  "nodeType": "text"
+                },
+                {
+                  "data": {},
+                  "marks": [{ "type": "bold" }],
+                  "value": "1900-2600+ ",
+                  "nodeType": "text"
+                }
+              ],
+              "nodeType": "paragraph"
+            }
+          ],
+          "nodeType": "list-item"
+        },
+        {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "HP: ",
+                  "nodeType": "text"
+                },
+                {
+                  "data": {},
+                  "marks": [{ "type": "bold" }],
+                  "value": "14000+",
+                  "nodeType": "text"
+                },
+                { "data": {}, "marks": [], "value": " ", "nodeType": "text" }
+              ],
+              "nodeType": "paragraph"
+            }
+          ],
+          "nodeType": "list-item"
+        },
+        {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "DEF: ",
+                  "nodeType": "text"
+                },
+                {
+                  "data": {},
+                  "marks": [{ "type": "bold" }],
+                  "value": "1100+ ",
+                  "nodeType": "text"
+                }
+              ],
+              "nodeType": "paragraph"
+            }
+          ],
+          "nodeType": "list-item"
+        },
+        {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "HAVOC DMG%: ",
+                  "nodeType": "text"
+                },
+                {
+                  "data": {},
+                  "marks": [{ "type": "bold" }],
+                  "value": "30%-70%+ ",
+                  "nodeType": "text"
+                },
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "(45% - 85% With Inherent Passive) ",
+                  "nodeType": "text"
+                }
+              ],
+              "nodeType": "paragraph"
+            }
+          ],
+          "nodeType": "list-item"
+        },
+        {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "CRIT RATE%: ",
+                  "nodeType": "text"
+                },
+                {
+                  "data": {},
+                  "marks": [{ "type": "bold" }],
+                  "value": "55-75%+",
+                  "nodeType": "text"
+                }
+              ],
+              "nodeType": "paragraph"
+            }
+          ],
+          "nodeType": "list-item"
+        },
+        {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "CRIT DMG% ",
+                  "nodeType": "text"
+                },
+                {
+                  "data": {},
+                  "marks": [{ "type": "bold" }],
+                  "value": "110-150%+",
+                  "nodeType": "text"
+                },
+                { "data": {}, "marks": [], "value": " ", "nodeType": "text" }
+              ],
+              "nodeType": "paragraph"
+            }
+          ],
+          "nodeType": "list-item"
+        },
+        {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "marks": [],
+                  "value": "Energy Regeneration: ",
+                  "nodeType": "text"
+                },
+                {
+                  "data": {},
+                  "marks": [{ "type": "bold" }],
+                  "value": "10-30%",
+                  "nodeType": "text"
+                }
+              ],
+              "nodeType": "paragraph"
+            },
+            {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "content": [
+                        {
+                          "data": {},
+                          "marks": [],
+                          "value": "Camellya isn't reliant on her ultimate to deal damage but it is part of her optimal rotation due to the Concerto and damage it contributes. ",
+                          "nodeType": "text"
+                        }
+                      ],
+                      "nodeType": "paragraph"
+                    }
+                  ],
+                  "nodeType": "list-item"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "content": [
+                        {
+                          "data": {},
+                          "marks": [],
+                          "value": "Camellya has in-built Energy Regeneration in her kit, allowing her to get away with less than other characters but some is still recommended to ensure she remains consistent - ",
+                          "nodeType": "text"
+                        },
+                        {
+                          "data": {},
+                          "marks": [{ "type": "bold" }],
+                          "value": "10-30%",
+                          "nodeType": "text"
+                        },
+                        {
+                          "data": {},
+                          "marks": [],
+                          "value": " is what we recommend (note you can get away with less in some teams and playstyles). ",
+                          "nodeType": "text"
+                        }
+                      ],
+                      "nodeType": "paragraph"
+                    }
+                  ],
+                  "nodeType": "list-item"
+                }
+              ],
+              "nodeType": "unordered-list"
+            }
+          ],
+          "nodeType": "list-item"
+        }
+      ],
+      "nodeType": "unordered-list"
+    },
+    {
+      "data": {},
+      "content": [{ "data": {}, "marks": [], "value": "", "nodeType": "text" }],
+      "nodeType": "paragraph"
+    }
+  ],
+  "nodeType": "document"
+}
