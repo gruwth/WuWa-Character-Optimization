@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        async function fetchCharacterList() {
+            const response = await fetch(
+                "https://guide-server.aki-game.net/role/avatar/list"
+            );
+            const raw = await response.json();
+            console.log(raw);
+
+            // normalize to an array in case the API returns an object like { characters: [...] } or { data: [...] }
+            const data = Array.isArray(raw)
+                ? raw
+                : raw.characters || raw.data || raw.results || [];
+
+            const listElement = document.createElement("ul");
+            data.forEach((character) => {
+                const name =
+                    character &&
+                        character.texts &&
+                        character.texts[1] &&
+                        character.texts[1].name
+                        ? character.texts[1].name
+                        : character && (character.name || character.title)
+                            ? character.name || character.title
+                            : "Unknown";
+                const roleGbId =
+                    character && character.roleGbId ? character.roleGbId : "N/A";
+                const listItem = document.createElement("li");
+                listItem.textContent = `${name} - ID: ${roleGbId}`;
+                listItem.dataset.roleGbId = roleGbId; // Store the roleGbId in a data attribute
+                // listItem.dataset.id = id; // Store the ID in a data attribute
+                listElement.appendChild(listItem);
+            });
+            // append the generated list to the document so it's visible
+            document.body.appendChild(listElement);
+        }
+
+        async function fetchCharacterData(roleGbId) {
+            const builds_url = `https://guide-server.aki-game.net/introduction/list?roleGbId=${encodeURIComponent(roleGbId)}`;
+            const res = await fetch(builds_url, {
+                method: "GET",
+                headers: {
+                    accept: "application/json, text/plain, */*",
+                    "x-language": "en",
+                    "x-token": "eyJjVWlkIjoiNTM1Nzc0NjQwIiwiY2hhbm5lbElkIjoxOCwiaW5uZXJUb2tlbiI6IjMwNTg5NjU3OWRlYjRmMDhiYTE0MjQxNWY4Njg3MWI3In0=",
+                },
+                mode: "cors",
+            });
+
+            const data = await res.json();
+            console.log(data);
+
+            const id = data && data.data && data.data[0] && data.data[0].id ? data.data[0].id : "N/A";
+            console.log(`Character ID: ${id}`);
+            const url = `https://guide-server.aki-game.net/introduction/info?roleGbId=${encodeURIComponent(roleGbId)}&id=${encodeURIComponent(id)}`;
+            const res2 = await fetch(url, {
+                method: "GET",
+                headers: {
+                    accept: "application/json, text/plain, */*",
+                    "x-language": "en",
+                    "x-token": "eyJjVWlkIjoiNTM1Nzc0NjQwIiwiY2hhbm5lbElkIjoxOCwiaW5uZXJUb2tlbiI6IjMwNTg5NjU3OWRlYjRmMDhiYTE0MjQxNWY4Njg3MWI3In0=",
+                },
+                mode: "cors",
+            });
+            const characterData = await res2.json();
+            console.log(characterData);
+        }
+
+        fetchCharacterList();
+
+        // event listener for clicks on character list items
+        document.body.addEventListener("click", (event) => {
+            if (event.target.tagName === "LI" && event.target.dataset.roleGbId) {
+                const characterId = event.target.dataset.roleGbId;
+                console.log(`Fetching data for character ID: ${characterId}`);
+                fetchCharacterData(characterId);
+            }
+        });
+    </script>
+</body>
+
+</html>

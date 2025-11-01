@@ -24,6 +24,11 @@ def endgameStats(data):
     
     return formatted_stats
 
+def fetch_character_list():
+    list_url = "https://guide-server.aki-game.net/role/avatar/list"
+    return requests.get(list_url).json()
+
 if __name__ == "__main__":
-    data = fetch_character_data(character)
-    print(endgameStats(data))
+    character_list = fetch_character_list()
+    for char in character_list['data']:
+        print(f"{char['texts'][1]['name']} - ID: {char['roleGbId']}")
