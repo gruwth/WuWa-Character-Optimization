@@ -1,7 +1,7 @@
 import requests
 import json
 
-character = "galbrena"
+character = "phrolova"
 
 base_url= "https://www.prydwen.gg/page-data/wuthering-waves/characters/{character}/page-data.json"
 
